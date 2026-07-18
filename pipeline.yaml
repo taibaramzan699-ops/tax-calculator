@@ -6,7 +6,7 @@ spec:
   workspaces:
     - name: pipeline-workspace
   params:
-  - name: repo-url
+    - name: repo-url
       type: string
     - name: path-to-context
       type: string
@@ -16,7 +16,6 @@ spec:
       default: "."
     - name: image-name
       type: string
-
   tasks:
     - name: fetch-repository
       taskRef:
@@ -29,7 +28,6 @@ spec:
           value: "$(params.repo-url)"
         - name: revision
           value: "main"
-
     - name: npminstall
       taskRef:
         name: npm-install
@@ -38,7 +36,6 @@ spec:
       workspaces:
         - name: source
           workspace: pipeline-workspace
-
     - name: tests
       taskRef:
         name: jasmine-test
@@ -47,7 +44,6 @@ spec:
       workspaces:
         - name: source
           workspace: pipeline-workspace
-
     - name: build
       taskRef:
         name: buildah
