@@ -7,13 +7,13 @@ spec:
     name: tax-calculator-pipeline
   params:
     - name: repo-url
-      value: "https://github.com/YOUR_USERNAME/tax-calculator.git"
+      value: "https://github.com/taibaramzan699-ops/tax-calculator.git"
     - name: path-to-context
       value: "."
     - name: path-to-dockerfile
       value: "."
     - name: image-name
-      value: "us.icr.io/YOUR_NAMESPACE/tax-calculator:latest"
+      value: "us.icr.io/sn-labs-taibaramzan6/tax-calculator:latest"
   workspaces:
     - name: pipeline-workspace
       volumeClaimTemplate:
