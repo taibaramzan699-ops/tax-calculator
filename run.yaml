@@ -5,6 +5,7 @@ metadata:
 spec:
   pipelineRef:
     name: tax-calculator-pipeline
+  serviceAccountName: pipeline
   params:
     - name: repo-url
       value: "https://github.com/taibaramzan699-ops/tax-calculator.git"
