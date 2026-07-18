@@ -6,6 +6,8 @@ spec:
   workspaces:
     - name: pipeline-workspace
   params:
+  - name: repo-url
+      type: string
     - name: path-to-context
       type: string
       default: "."
