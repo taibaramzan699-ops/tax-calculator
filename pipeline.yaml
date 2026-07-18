@@ -20,6 +20,7 @@ spec:
     - name: fetch-repository
       taskRef:
         name: git-clone
+        kind: ClusterTask
       workspaces:
         - name: output
           workspace: pipeline-workspace
@@ -47,6 +48,7 @@ spec:
     - name: build
       taskRef:
         name: buildah
+        kind: ClusterTask
       runAfter:
         - tests
       workspaces:
