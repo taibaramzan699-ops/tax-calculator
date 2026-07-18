@@ -16,10 +16,4 @@ spec:
       value: "us.icr.io/sn-labs-taibaramzan6/tax-calculator:latest"
   workspaces:
     - name: pipeline-workspace
-      volumeClaimTemplate:
-        spec:
-          accessModes:
-            - ReadWriteOnce
-          resources:
-            requests:
-              storage: 1Gi
+      emptyDir: {}
